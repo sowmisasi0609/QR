@@ -1,0 +1,14 @@
+
+{% extends 'qrapp/base.html' %}
+{% block content %}
+
+<h3 class="mb-3">Upload PDF to Generate QR Code</h3>
+
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+
+    <button class="btn btn-primary">Upload & Generate QR</button>
+</form>
+
+{% endblock %}
